@@ -1,0 +1,171 @@
+.search-block {
+  border-radius: $border-radius-md;
+}
+
+.search-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 0;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-lg;
+  background: rgba(230, 230, 230, 0.9);
+  border: none;
+  border-radius: $border-radius-sm $border-radius-sm 0 0;
+  color: $text-light;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    background: $white;
+    color: $primary-color;
+
+    svg {
+      color: $primary-color;
+    }
+    &:hover {
+      background: $white;
+      color: $primary-color;
+
+      svg {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &:hover {
+    background: rgba(210, 210, 210, 0.9);
+    color: $primary-color;
+
+    svg {
+      color: $primary-color;
+    }
+  }
+}
+
+.search-container {
+  background: $white;
+  padding: $spacing-lg;
+  display: flex;
+  gap: $spacing-md;
+}
+
+.search-inputs {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background: $white;
+  border: 1px solid #e5e5e5;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xs;
+}
+
+.input-wrapper {
+  flex: 1;
+  padding: $spacing-sm $spacing-md;
+
+  input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: $spacing-sm 0;
+    font-size: 14px;
+    color: $text-color;
+
+    &::placeholder {
+      color: $text-light;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.input-divider {
+  width: 1px;
+  height: 24px;
+  background: #e5e5e5;
+  margin: 0;
+}
+
+.swap-button {
+  background: transparent;
+  border: none;
+  padding: $spacing-xs;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.find-button {
+  padding: $spacing-md $spacing-xl;
+  background: $primary-color;
+  color: $white;
+  border: none;
+  border-radius: $border-radius-sm;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+@include responsive(md) {
+  .search-tabs {
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .find-button {
+    width: 100%;
+  }
+}
+
+.date-wrapper {
+  input[type="date"] {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: $spacing-sm 0;
+    font-size: 14px;
+    color: $text-color;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+
+    &::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.search-wrapper {
+  padding: 32px;
+}

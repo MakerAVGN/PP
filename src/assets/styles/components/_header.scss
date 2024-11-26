@@ -1,0 +1,67 @@
+header {
+  width: 100%;
+  background: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 32px $container-padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+
+  a {
+    font-weight: 700;
+    font-size: 24px;
+    color: $primary-color;
+  }
+
+  span {
+    color: $text-light;
+    font-size: 12px;
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    font-size: 14px;
+    @include hover-transition;
+  }
+}
+
+.find-trip,
+.create-trip {
+  color: $secondary-color;
+  font-weight: 500;
+}
+
+.create-trip {
+  color: #064ea0;
+}
+
+.auth {
+  color: $text-color;
+}

@@ -1,0 +1,43 @@
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: $spacing-md + 4px;
+  border: 1px solid #e5e5e5;
+  border-radius: $border-radius-sm;
+  font-size: 16px;
+  color: $text-color;
+
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.1);
+  }
+}
+
+.checkbox {
+  span {
+    font-size: 14px;
+  }
+}
+
+.submit-btn {
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+
+    &:hover {
+      background: #ccc;
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.footer {
+  background-color: $background-light;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-lg;
+
+  a {
+    font-weight: 700;
+    font-size: 24px;
+    color: $primary-color;
+  }
+
+  span {
+    color: $text-light;
+    font-size: 12px;
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.social-link {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dddddd;
+  box-shadow: $shadow-sm;
+  transition: all 0.3s ease;
+
+  img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+.footer-col {
+  h4 {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: $spacing-lg;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: $spacing-md;
+    }
+
+    a {
+      color: $text-light;
+      font-size: 14px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  padding-top: $spacing-lg;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  color: $text-light;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: $spacing-lg;
+
+  a {
+    color: $text-light;
+    font-size: 14px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+@include responsive(lg) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@include responsive(sm) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: $spacing-lg;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+}

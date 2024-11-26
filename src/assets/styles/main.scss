@@ -1,0 +1,39 @@
+@import "variables";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 63px;
+}
+
+main {
+  padding: 32px 0;
+  background-color: $background-light;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  @include container;
+}
+
+@import "components/header";
+@import "components/footer";
+@import "components/benefits";
+@import "components/search";
+@import "pages/_login";
+@import "components/routes";
+@import "pages/_registration";
+@import "pages/_home";
